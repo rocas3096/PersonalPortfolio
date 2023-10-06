@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oscar Zavala</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/449737da43.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/449737da43.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div id="header">
@@ -45,9 +48,18 @@
               aliquid asperiores. Tempore voluptate quis cum.
             </p>
             <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
-              <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
-              <p class="tab-links" onclick="opentab('education', event)">Education</p>
+              <p
+                class="tab-links active-link"
+                onclick="opentab('skills', event)"
+              >
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience', event)">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education', event)">
+                Education
+              </p>
             </div>
             <div class="tab-contents active-tab" id="skills">
               <ul>
@@ -57,18 +69,78 @@
             </div>
             <div class="tab-contents" id="experience">
               <ul>
-                <li><span>2022-2023</span><br />Inventory Control and Quality Assurance at Target</li>
-                <li><span>2018-2019</span><br />Product Development Intern at Order of Saint Francis Healthcare (OSF)</li>
-                <li><span>2018-2018</span><br />Engineering Intern at Commonwealth Edison</li>
+                <li>
+                  <span>2022-2023</span><br />Inventory Control and Quality
+                  Assurance at Target
+                </li>
+                <li>
+                  <span>2018-2019</span><br />Product Development Intern at
+                  Order of Saint Francis Healthcare (OSF)
+                </li>
+                <li>
+                  <span>2018-2018</span><br />Engineering Intern at Commonwealth
+                  Edison
+                </li>
               </ul>
             </div>
             <div class="tab-contents" id="education">
               <ul>
-                <li><span>2023-2023</span><br />Full-Stack Development Bootcamp at University of Minnesota</li>
-                <li><span>2017-2019</span><br />BS in Mechanical Engineering from UIC</li>
-                <li><span>2014-2016</span><br />Studied Engineering Mechanics at UIUC</li>
+                <li>
+                  <span>2023-2023</span><br />Full-Stack Development Bootcamp at
+                  University of Minnesota
+                </li>
+                <li>
+                  <span>2017-2019</span><br />BS in Mechanical Engineering from
+                  UIC
+                </li>
+                <li>
+                  <span>2014-2016</span><br />Studied Engineering Mechanics at
+                  UIUC
+                </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ----------Services---------- -->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur explicabo veritatis id nobis asperiores a quasi
+              labore, perspiciatis laboriosam maiores, iure possimus provident
+              sit earum error tempore porro doloremque nisi.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-crop"></i>
+            <h2>UI/UX Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur explicabo veritatis id nobis asperiores a quasi
+              labore, perspiciatis laboriosam maiores, iure possimus provident
+              sit earum error tempore porro doloremque nisi.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-app-store"></i>
+            <i class="fa-brands fa-google-play"></i>
+            <h2>App Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur explicabo veritatis id nobis asperiores a quasi
+              labore, perspiciatis laboriosam maiores, iure possimus provident
+              sit earum error tempore porro doloremque nisi.
+            </p>
+            <a href="#">Learn More</a>
           </div>
         </div>
       </div>
@@ -79,16 +151,16 @@
       var tabcontents = document.getElementsByClassName("tab-contents");
 
       function opentab(tabname, event) {
-      for (tablink of tablinks) {
-        tablink.classList.remove("active-link");
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
       }
-      
-      for (tabcontent of tabcontents) {
-        tabcontent.classList.remove("active-tab");
-      }
-      event.currentTarget.classList.add("active-link");
-      document.getElementById(tabname).classList.add("active-tab");
-    }
     </script>
   </body>
 </html>
