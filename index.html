@@ -14,20 +14,21 @@
     <div id="header">
       <div class="container">
         <nav>
-          <img src="/assets/images/logo.jpeg" class="logo" />
-          <ul id="sidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <i class="fas fa-times" onclick="closemenu()"></i>
+          <img src="/assets/images/placeholder_logo.png" class="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
-          <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
           <p>Full-Stack Developer</p>
-          <h1>Hi, my name is <span>Oscar</span><br />Zavala from Chicago</h1>
+          <h1>
+            Hi, my name is <span>Oscar</span><br />Zavala and I'm currently<br />
+            residing in Cicero, IL.
+          </h1>
         </div>
       </div>
     </div>
@@ -36,7 +37,7 @@
       <div class="container">
         <div class="row">
           <div class="about-col-1">
-            <img src="assets/images/user.jpeg" />
+            <img src="assets/images/headshot-placeholder.jpg" />
           </div>
           <div class="about-col-2">
             <h1 class="sub-title">About Me</h1>
@@ -150,7 +151,7 @@
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
           <div class="work">
-            <img src="assets/images/work-1.jpeg" alt="" />
+            <img src="assets/images/background_image.png" alt="" />
             <div class="layer">
               <h3>Social Media App</h3>
               <p>
@@ -163,7 +164,7 @@
             </div>
           </div>
           <div class="work">
-            <img src="assets/images/work-2.jpeg" alt="" />
+            <img src="assets/images/background_image.png" alt="" />
             <div class="layer">
               <h3>Music App</h3>
               <p>
@@ -176,7 +177,7 @@
             </div>
           </div>
           <div class="work">
-            <img src="assets/images/work-3.jpeg" alt="" />
+            <img src="assets/images/background_image.png" alt="" />
             <div class="layer">
               <h3>Online Shopping App</h3>
               <p>
@@ -211,11 +212,11 @@
             >
           </div>
           <div class="contact-right">
-            <form name="submit-to-google-sheet">
+            <form>
               <input type="text" name="Name" placeholder="Your Name" required />
               <input
                 type="email"
-                name="Email"
+                name="email"
                 placeholder="Your Email"
                 required
               />
@@ -226,12 +227,11 @@
               ></textarea>
               <button type="submit" class="btn btn2">Submit</button>
             </form>
-            <span id="msg"></span>
           </div>
         </div>
       </div>
       <div class="copyright">
-        <p>Copyright © Oscar 2023</p>
+        <p>copyright © Oscar</p>
       </div>
     </div>
 
@@ -250,35 +250,6 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
       }
-    </script>
-
-    <script>
-      var sidemenu = document.getElementById("sidemenu");
-      function openmenu() {
-        sidemenu.style.right = "0";
-      }
-      function closemenu() {
-        sidemenu.style.right = "-200px";
-      }
-    </script>
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbw73ERNyUYZLzyPy_8hYeSgnwLEvxr3caxMWL1rhAexnZpApHQEB2WDKj9U9sBj78yJ/exec";
-      const form = document.forms["submit-to-google-sheet"];
-      const msg = document.getElementById("msg");
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            msg.innerHTML = "Message sent succesfully";
-            setTimeout(function () {
-              msg.innerHTML = "";
-            }, 5000);
-            form.reset();
-          })
-          .catch((error) => console.error("Error!", error.message));
-      });
     </script>
   </body>
 </html>
