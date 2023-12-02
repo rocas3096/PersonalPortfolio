@@ -68,6 +68,7 @@ nav ul li a:hover::after {
 
 .header-text {
   margin-top: 20%;
+  margin-right: 40%;
   font-size: 30px;
 }
 
@@ -102,6 +103,7 @@ nav ul li a:hover::after {
 
 .about-col-2 {
   flex-basis: 60%;
+  text-align: justify;
 }
 
 .sub-title {
@@ -216,7 +218,9 @@ nav ul li a:hover::after {
   position: relative;
   overflow: hidden;
 }
-
+.work p {
+  text-align: justify;
+}
 .work img {
   width: 100%;
   border-radius: 10px;
@@ -363,12 +367,39 @@ nav .fas {
   display: none;
 }
 
+@media only screen and (max-width: 768px) {
+  #header {
+    background-image: url(/assets/images/tablet_background.jpeg);
+  }
+  .header-text {
+    margin-right: 40%;
+    font-size: 16px;
+  }
+  .about-col-2 {
+    text-align: justify;
+  }
+  .work h3 {
+    font-size: 14px;
+  }
+  .work p {
+    font-size: 11px;
+    text-align: justify;
+  }
+  .layer h3 {
+    margin-bottom: 10px;
+  }
+  .layer a {
+    margin-top: 10px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   #header {
     background-image: url(/assets/images/phone-background.jpeg);
   }
   .header-text {
     margin-top: 100%;
+    margin-right: 60%;
     font-size: 16px;
   }
   .header-text h1 {
@@ -411,6 +442,7 @@ nav .fas {
   }
   .about-col-2 {
     font-size: 14px;
+    text-align: justify;
   }
   .tab-links {
     font-size: 16px;
@@ -422,6 +454,25 @@ nav .fas {
   }
   .copyright {
     font-size: 14px;
+  }
+  .work p {
+    text-align: justify;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .work h3 {
+    font-size: 14px;
+  }
+  .work p {
+    font-size: 9px;
+    text-align: justify;
+  }
+  .layer h3 {
+    margin-bottom: 10px;
+  }
+  .layer a {
+    margin-top: 10px;
   }
 }
 
